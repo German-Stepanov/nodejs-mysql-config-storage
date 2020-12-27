@@ -1,6 +1,6 @@
 {
   "name": "mysql-config-storage",
-  "version": "1.0.2",
+  "version": "1.0.1",
   "description": "MySQL config storage",
   "main": "index.js",
   "dependencies": {
