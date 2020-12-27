@@ -1,0 +1,27 @@
+{
+  "name": "mysql-config-storage",
+  "version": "1.0.0",
+  "description": "MySQL config storage",
+  "main": "index.js",
+  "dependencies": {
+    "model-for-mysql": "^1.0.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/German-Stepanov/nodejs-mysql-config-storage.git"
+  },
+  "keywords": [
+    "mysql",
+    "storage"
+  ],
+  "author": "German Stepanov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/German-Stepanov/nodejs-mysql-config-storage/issues"
+  },
+  "homepage": "https://github.com/German-Stepanov/nodejs-mysql-config-storage#readme"
+}
