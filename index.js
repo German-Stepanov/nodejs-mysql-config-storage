@@ -88,7 +88,17 @@ var Config = function (config) {
 		//Заполоняем данные из БД
 		mdl_config.select ({fields:['config_key', 'config_value']}, function (rows) {
 			for (var i in rows) {
-				req.config[rows[i]['config_key']] = JSON.parse(rows[i]['config_value']);
+				try {
+					req.config[rows[i]['config_key']] = JSON.parse(rows[i]['config_value']);
+				} catch (e) {
+					if ((rows[i]['config_value']*1).toString()==rows[i]['config_value'].toString()) {
+						//Число
+						req.config[rows[i]['config_key']] = rows[i]['config_value']*1;
+					} else {
+						//Строка
+						req.config[rows[i]['config_key']] = rows[i]['config_value'];
+					}
+				}
 			};
 			next();	
 		});
